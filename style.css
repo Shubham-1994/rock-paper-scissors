@@ -1,0 +1,200 @@
+body{
+  background: radial-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+  font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+header{
+  margin: 20px auto;
+  padding: 20px;
+  min-width: 50%;
+  border-width: 2px;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: hsl(217, 16%, 45%);
+}
+h1{
+  margin: 0;
+  color: hsl(229, 25%, 31%);
+  font-size: xxx-large;
+}
+header .score{
+  text-align: center;
+  float: right;
+  background-color: white; 
+  width: 20%;
+  height: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.score-text{
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: small;
+  color: hsl(229, 64%, 46%);
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.content{
+  
+  margin: 3% auto;
+  background: url("./images/bg-triangle.svg") no-repeat center;
+  height: 400px;
+}
+
+
+.content-body{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.parent {
+  opacity: 0;
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)); */
+  box-shadow: 1px 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 6px 10px 14px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+  animation: fadeIn 0.8s 0.2s ease-in-out forwards;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+}
+.rock{
+  background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+  align-self: flex-end;
+}
+.paper{
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.scissors{
+  background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+}
+
+
+.game-section{
+  display: none;
+  margin: 3% auto;
+  width: 50%;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+/* @keyframes slideIn{
+  from 
+} */
+
+.game-section-inner{
+  display: flex;
+  justify-content: space-between;
+}
+.footer{
+  margin:10px;
+  align-self: flex-end;
+}
+button{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: small;
+  background: transparent;
+  color: white;
+  padding: 7px 28px;
+  border-width: 2px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: hsl(217, 16%, 45%);
+
+}
+#modal{
+  position: relative;
+  opacity: 1;
+  margin: 0 auto;
+  text-align: center;
+  width: 27%;
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  top: -33rem;
+}
+h2{
+  margin: 0;
+}
+.modal-heading{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  color: hsl(229, 25%, 31%);;
+}
+.modal-body{
+  padding: 30px;
+}
+h3{
+  text-align:center; color:white;letter-spacing: 2px;font-weight: 100;
+}
+#result{
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.result-section{
+  position: relative;
+  top: -600px;
+  align-self: center;
+  text-align: center;
+  display: none;
+  animation: drop 0.5s 0.3s ease forwards;
+}
+@keyframes drop{
+  0%{opacity: 0;}
+  /* 70%{ transform: translateY(700px);} */
+  100%{transform: translateY(600px); opacity: 1;}
+}
+.play-again{
+  background-color: white;
+  border-radius: 12px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.game-section-container{
+  display: flex;justify-content: space-between;
+}
+@media (max-width: 575.98px) { 
+  .game-section-container{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: 1 0 20%; */
+  }
+  
+  #modal{
+    width: 100%;
+  }
+  .modal-body img{
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+      <div>
+        <img src="./images/logo.svg" alt="logo">
+        <div class="score">
+          <p class="score-text">SCORE</p>
+          <h1 id="score-count">0</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="content-body" id="element-button">
+        <div class="parent paper" id="paper-outer">
+          <div class="child" id="paper-inner">
+            <img src="./images/icon-paper.svg" id="paper-img" alt="paper">
+          </div>
+        </div>
+
+        <div class="parent rock" id="rock-outer">
+          <div class="child" id="rock-inner">
+            <img src="./images/icon-rock.svg" id="rock-img" alt="rock">
+          </div>
+        </div>
+        <div class="parent scissors" id="scissors-outer">
+          <div class="child" id="scissors-inner">
+            <img src="./images/icon-scissors.svg" id="scissors-img" alt="scissors">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="game-section">
+      <div class="game-section-container">
+        <div class="game-section-inner"></div>
+        <div class="result-section">
+          <h1 id="result"></h1>
+          <button class="play-again" onclick="restart()">PLAY AGAIN</button>
+        </div>
+        <div class="computer"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button type="button" onclick="showModal()">RULES</button>
+    </div>
+
+
+
+  </div>
+  <!-- <div id="modal">
+    <div class="modal-heading">
+      <h2>RULES</h2>
+      <div class="close">
+        <img src="./images/icon-close.svg" alt="close" style="object-fit: contain;">
+      </div>
+    </div>
+    <div class="modal-body">
+      <img src="./images/image-rules.svg" alt="rules">
+    </div>
+
+  </div> -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
