@@ -41,10 +41,11 @@ header .score{
   align-items: center;
 }
 .content{
-  
+  opacity: 0;
   margin: 3% auto;
   background: url("./images/bg-triangle.svg") no-repeat center;
   height: 400px;
+  animation: fadeIn 0.4s 0.2s ease-in-out forwards;
 }
 
 
@@ -64,7 +65,7 @@ header .score{
   /* background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)); */
   box-shadow: 1px 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 6px 10px 14px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 
-  animation: fadeIn 0.8s 0.2s ease-in-out forwards;
+  animation: fadeIn 1s 0.4s ease-in-out forwards;
 }
 @keyframes fadeIn{
   from{
@@ -173,6 +174,7 @@ h3{
   100%{transform: translateY(600px); opacity: 1;}
 }
 .play-again{
+  border: none;
   background-color: white;
   border-radius: 12px;
   padding-top:10px;
@@ -182,6 +184,10 @@ h3{
 }
 .game-section-container{
   display: flex;justify-content: space-between;
+}
+.header-container{
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 575.98px) { 
   .game-section-container{
@@ -194,7 +200,33 @@ h3{
   #modal{
     width: 100%;
   }
+  .modal-body{
+    padding: 0;
+  }
   .modal-body img{
     object-fit: cover;
   }
+  .content{
+    background-position-y: 46px;
+    height: 300px;
+    width: 320px;
+  }
+  
+  .parent{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  .child{
+    width: 60px;
+    height:60px;
+  }
+  
+  .parent img{
+    width: 32px;
+  }
+  .score-text{
+    font-size: 8px;
+  }
+  
 }
